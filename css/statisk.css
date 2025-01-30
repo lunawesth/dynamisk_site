@@ -1,0 +1,188 @@
+* {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 2px;
+}
+
+header {
+  margin-top: 30px;
+}
+
+.menu_liste {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  justify-content: right;
+  list-style-type: none;
+}
+
+.menu {
+  text-decoration: none;
+  color: #000;
+  border: solid 1px black;
+  padding: 10px;
+}
+
+.r {
+  transform: scaleX(-1);
+  display: inline-block;
+  color: rgb(252, 0, 0);
+}
+
+.overskrift {
+  font-size: 40px;
+}
+
+footer {
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* index */
+
+.knap_container {
+  display: grid;
+  text-align: center;
+}
+
+.knap1,
+.knap2,
+.knap3,
+.knap4,
+.knap5,
+.knap6 {
+  background: color #fff;
+  color: #000;
+  border: solid 1px black;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 30px 30px;
+  font-size: 20px;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+article {
+  padding: 10px;
+}
+
+/* produktliste */
+
+.produkter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+.read_more {
+  text-decoration: none;
+  color: #000;
+  margin-top: auto;
+  border-bottom: solid 1px black;
+}
+
+.tilbud {
+  background-color: red;
+  display: inline-block;
+}
+
+.sold-out_container {
+  position: relative;
+}
+
+.sold-out_billede {
+  position: relative;
+}
+
+.sold-out_tekst {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.sold-out_container img {
+  filter: grayscale(80%) opacity(50%);
+}
+
+/* produktside */
+
+.tilbage {
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+  margin-right: 10vw;
+  list-style-type: none;
+}
+
+.produkt_side {
+  border: none;
+}
+
+.kurven {
+  border: solid 1px #000;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.kurven:hover {
+  opacity: 0.5;
+}
+
+@media (width >= 700px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  /* index */
+
+  .knap_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px;
+    gap: 10px;
+  }
+
+  /* produktliste */
+
+  .produkter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  /* produktside */
+
+  .tilbage {
+    margin-right: 400%;
+  }
+
+  .produkt_side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: none;
+  }
+
+  .produkt_billede {
+    grid-row: 1/4;
+    grid-column: 1;
+  }
+
+  .produkt_tekst {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+  .kurven {
+    font-size: 20px;
+    grid-row: 2;
+    grid-column: 2;
+    display: inline-block;
+    margin: 30px;
+  }
+}
